@@ -8,6 +8,8 @@ class Estudiante(User):
 
 class Capitulo(models.Model):
     nombre=models.CharField(default="", max_length=20)
+    def __str__(self):
+        return self.nombre
     
     
 class Contenido(models.Model):
@@ -15,3 +17,5 @@ class Contenido(models.Model):
     titulo=models.CharField(default="", max_length=25)
     contenido1=models.CharField(default="", max_length=300)
     imagen=models.ImageField(null=True)
+    def __str__(self):
+        return self.titulo
