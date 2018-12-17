@@ -1,5 +1,5 @@
-{%extends "base.html"%} 
-{%block contenidos%} 
+{%extends "base.html"%}
+{%block contenidos%}
 <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -21,19 +21,15 @@
           <li class="dropdown">
               <a href="#" class="active dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Capítulos <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                  {% for c in contenidos_todos  %}
+                <li><a href="#">{{c}}</a></li>
+                {% endfor %}
               </ul>
             </li>
-            
+
             <li><a href="#about">Acerca de...</a></li>
             <li><a href="#contact">Contacto</a></li>
-            
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -44,12 +40,14 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
 		<h1>{{nombre}}</h1>
-        
-        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+        <h2>{{titulo}}</h2>
+        <p>{{contenido1}}</p>
+        <p>{{contenido2}}</p>
+        <img src="{{imagen}}" />
       </div>
 
 
-      <div class="page-header">
+      <!--div class="page-header">
         <h1>Buttons</h1>
       </div>
       <p>
@@ -374,7 +372,7 @@
                 </ul>
               </li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div><!--/.nav-collapse ->
         </div>
       </nav>
 
@@ -407,7 +405,7 @@
                 </ul>
               </li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div><!--/.nav-collapse ->
         </div>
       </nav>
 
@@ -469,7 +467,7 @@
             <li class="list-group-item">Porta ac consectetur ac</li>
             <li class="list-group-item">Vestibulum at eros</li>
           </ul>
-        </div><!-- /.col-sm-4 -->
+        </div><!-- /.col-sm-4 ->
         <div class="col-sm-4">
           <div class="list-group">
             <a href="#" class="list-group-item active">
@@ -480,7 +478,7 @@
             <a href="#" class="list-group-item">Porta ac consectetur ac</a>
             <a href="#" class="list-group-item">Vestibulum at eros</a>
           </div>
-        </div><!-- /.col-sm-4 -->
+        </div><!-- /.col-sm-4 ->
         <div class="col-sm-4">
           <div class="list-group">
             <a href="#" class="list-group-item active">
@@ -496,7 +494,7 @@
               <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
             </a>
           </div>
-        </div><!-- /.col-sm-4 -->
+        </div><!-- /.col-sm-4 ->
       </div>
 
 
@@ -521,7 +519,7 @@
               Panel content
             </div>
           </div>
-        </div><!-- /.col-sm-4 -->
+        </div><!-- /.col-sm-4 ->
         <div class="col-sm-4">
           <div class="panel panel-success">
             <div class="panel-heading">
@@ -539,7 +537,7 @@
               Panel content
             </div>
           </div>
-        </div><!-- /.col-sm-4 -->
+        </div><!-- /.col-sm-4 ->
         <div class="col-sm-4">
           <div class="panel panel-warning">
             <div class="panel-heading">
@@ -557,7 +555,7 @@
               Panel content
             </div>
           </div>
-        </div><!-- /.col-sm-4 -->
+        </div><!-- /.col-sm-4 ->
       </div>
 
 
@@ -601,4 +599,4 @@
 
 
     </div> <!-- /container -->
-{%endblock%} 
+{%endblock%}

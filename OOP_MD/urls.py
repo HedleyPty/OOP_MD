@@ -19,4 +19,7 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('contenido.urls')),
+ #   staticfiles_urlpatterns(),
+  #   static(MEDIA_URL, document_root=MEDIA_ROOT),
 ]
+

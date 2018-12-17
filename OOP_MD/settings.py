@@ -25,7 +25,7 @@ SECRET_KEY = '&ue@y2-4)!2ed!2itda_^-owcw!**@l5l77e3!nq38-e7ilt)_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['freebie.pythonanywhere.com']
 
 
 # Application definition
@@ -118,4 +118,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    "/home/FreeBie/OOP_MD/recursos",
+    "/home/FreeBie/OOP_MD/contenido/recursos"
+]
+
+STATIC_ROOT = "//home/FreeBie/OOP_MD"
+STATIC_URL = STATIC_ROOT+"/recursos/"
