@@ -11,7 +11,7 @@ def index(request,capitulo="2"):
     contenido1=contenido[0].contenido1
     contenido2=contenido[0].contenido2
     return render(request,
-                    "index.html",
+                    "contenidos.html",
                     context= {"nombre":nombre,
                               "titulo":titulo,
                               "contenido1": contenido1,
